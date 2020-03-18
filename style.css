@@ -1,0 +1,418 @@
+section {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.globe-logo {
+    font-size: 76px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-text a {
+    color: #000;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 0px) {
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .globe-logo {
+        font-size: 63px;
+    }
+
+    .top-header .header-menu {
+        display: inline-block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .search-location {
+        display: none;
+    }
+
+    .event-cards .card-body {
+        min-height: 160px;
+    }
+
+    .event-cards .card {
+        margin-bottom: 1.5rem;
+    }
+
+    footer .nav-item {
+        display: none;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .show-cart-link {
+        display: none;
+    }
+
+    .show-cart-link {
+        display: none;
+    }
+
+    .info-entity-page img {
+        width: 100%;
+    }
+
+    .person-title {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .globe-logo {
+        font-size: 69px;
+    }
+
+    .person-image {
+        margin-right: .5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo-text {
+        font-size: 22px;
+    }
+
+    .globe-logo {
+        font-size: 75px;
+    }
+
+    .top-header .navbar-expand-md .navbar-collapse {
+        display: none !important;
+        padding: 0;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .search-location {
+        display: inline;
+    }
+
+    .select-font {
+        padding-right: 0;
+    }
+
+    .about h4 {
+        float: left;
+        width: 40%;
+    }
+
+    .about img {
+        width: 60%;
+        float: right;
+    }
+
+    .inner-card {
+        display: block;
+        clear: both;
+    }
+
+    .inner-card img {
+        float: left;
+        width: 43.59%;
+    }
+
+    .inner-card .card-body div {
+        width: 56.41%;
+        float: right;
+        padding-left: 1em;
+    }
+
+    .inner-card .card-body div a {
+        font-size: 1.3rem;
+    }
+
+    .inner-card .card-body {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .event-cards .card-body {
+        min-height: 470px;
+    }
+
+    .event-cards .card {
+        margin-bottom: 0;
+    }
+
+    footer .nav-item {
+        display: list-item;
+    }
+
+    .breadcrumb {
+        display: flex;
+    }
+
+    .show-cart-link {
+        display: block;
+    }
+
+    .info-entity-page img {
+        width: 50%;
+        float: left;
+    }
+
+    .person-title {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .logo-text {
+        font-size: 24px;
+    }
+
+    .globe-logo {
+        font-size: 81px;
+    }
+
+    .event-cards .card-body {
+        min-height: 305px;
+    }
+
+    .person-title {
+        margin-top: 5.3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .person-title {
+        margin-top: 6.8rem;
+    }
+}
+
+.header-link {
+    font-size: 0.85rem;
+}
+
+.telephone {
+    text-decoration-style: dotted;
+}
+
+.header-menu {
+    padding: 0;
+}
+
+.header-menu .navbar-nav .nav-link {
+    padding-left: 0;
+}
+
+.header-menu .form-inline .form-control {
+    width: 100%;
+}
+
+.top-header .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #fff;
+}
+
+.top-header .navbar {
+    padding: 0;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+    padding: 0;
+    border: none;
+    font-size: 1rem;
+}
+
+.top-header .navbar-collapse {
+    position: fixed;
+    width: 100%;
+    margin-top: 88px;
+    padding-left: 15px;
+    z-index: 1;
+    background-color: #fff;
+    text-align: left;
+    left: 0;
+}
+
+.learning-carousel img {
+    width: 100%
+}
+
+
+.carousel-container .carousel-caption {
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    left: 30%;
+    right: 30%;
+}
+
+.info-blocks {
+    padding-bottom: 0;
+}
+
+.info-blocks .card {
+    margin-bottom: 1.5rem;
+}
+
+.more a {
+    margin-top: .5rem;
+}
+
+.about {
+    clear: both;
+    padding-top: 0;
+}
+
+.about h4 {
+    display: block;
+}
+
+.about .card-text {
+    display: block;
+}
+
+.events {
+    clear: both;
+}
+
+.inner-card .card-body {
+    padding: 0;
+}
+
+.inner-card {
+    border: none;
+}
+
+.info-entities-link {
+    float: right;
+}
+
+.date {
+    font-size: 12px;
+}
+
+.after-info-entity {
+    clear: both;
+}
+
+.news-container {
+    padding-left: 0;
+}
+
+.news-container .card {
+    border: none;
+}
+
+.news-container .card-body {
+    padding-left: 0;
+}
+
+.news-container .date {
+    padding-bottom: 0;
+}
+
+.news-line .card-body {
+    padding-top: 0;
+}
+
+.info-entity h4 {
+    display: block;
+    float: left;
+}
+
+.event-cards .last-event {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+}
+
+footer .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+footer .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+footer .time {
+    padding-top: .5rem;
+}
+
+footer .icon {
+    padding-right: 10px;
+}
+
+footer .show-item {
+    display: list-item;
+}
+
+p {
+    font-size: 14px;
+}
+
+.card-body div.link-title a {
+    font-size: 16px;
+}
+
+.inner-card .card-body div.date {
+    width: 100%;
+    float: none;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.breadcrumb-item {
+    font-size: 0.72rem;
+}
+
+.person-title {
+    margin-bottom: 1rem;
+}
+
+.person-image {
+    margin-bottom: 1rem;
+}
