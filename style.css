@@ -416,3 +416,7 @@ ul {
 .person-image {
     margin-bottom: 1rem;
 }
+
+.info-entity-page label {
+    font-size: 0.86rem;
+}
