@@ -184,11 +184,11 @@
                 <nav class="navbar navbar-light pb-0 mb-3 pt-0 bg-light">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Основные сведения</a>
+                            <a class="nav-link active" href="about.html">Основные сведения</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="establishment.html">Структура и органы управления
-                                образовательной организацией</a>
+                            <a class="nav-link" href="establishment.html">Структура и органы управления образовательной
+                                организацией</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="documents.html">Документы</a>
@@ -200,10 +200,12 @@
                             <a class="nav-link" href="educational_standards.html">Образовательные стандарты РФ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="management.html">Руководство. Педагогический (научно-педагогический) состав</a>
+                            <a class="nav-link" href="management.html">Руководство. Педагогический
+                                (научно-педагогический) состав</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="technical-support.html">Материально-техническое обеспечение и оснащённость
+                            <a class="nav-link active" href="technical-support.html">Материально-техническое обеспечение
+                                и оснащённость
                                 образовательного процесса</a>
                         </li>
                         <li class="nav-item">
@@ -265,41 +267,46 @@
                 <nav class="breadcrumb">
                     <a href="template.html" class="breadcrumb-item">Главная</a>
                     <a href="about.html" class="breadcrumb-item">Сведения об общеобразовательной организации</a>
-                    <span class="breadcrumb-item active">Структура и органы управления образовательной организацией</span>
+                    <span class="breadcrumb-item active">Стипендии и иные виды материальной поддержки</span>
                 </nav>
                 <div class="card mb-2">
                     <div class="card-body info-entity-page">
-                        <h1 class="card-title">Структура и органы управления образовательной организацией</h1>
-                        <h2>Правовое управление</h2>
-                        <ul>
-                            <li><b>Руководитель:</b> <a href="person-ivanov.html">Иванов Иван Иванович</a></li>
-                            <li><b>Адрес:</b> 109544, Россия, г. Москва, бульвар Энтузиастов, дом 2</li>
-                            <li><b>Телефон:</b> +7 (495) 229-14-41</li>
-                            <li><b>E-mail:</b> info@1c-bitrix.ru</li>
-                            <li><b>Сайт:</b> 1c-bitrix.ru</li>
-                            <li><b>Режим работы:</b> 9:00 до 20:00, Пн-Пт</li>
-                            <li><a href="documents/ivanov.pdf">Положение о подразделении</a></li>
-                        </ul>
-                        <h2>Военный отдел</h2>
-                        <ul>
-                            <li><b>Руководитель:</b> <a href="person-petrov.html">Петров Петр Петрович</a></li>
-                            <li><b>Адрес:</b> 109544, Россия, г. Москва, бульвар Энтузиастов, дом 2</li>
-                            <li><b>Телефон:</b> +7 (495) 229-14-41</li>
-                            <li><b>E-mail:</b> info@1c-bitrix.ru</li>
-                            <li><b>Сайт:</b> 1c-bitrix.ru</li>
-                            <li><b>Режим работы:</b> 9:00 до 20:00, Пн-Пт</li>
-                            <li><a href="documents/petrov.pdf">Положение о подразделении</a></li>
-                        </ul>
-                        <h2>Бухгалтерия</h2>
-                        <ul>
-                            <li><b>Руководитель:</b> <a href="person-sidorov.html">Сидорова Сидора Сидоровна</a></li>
-                            <li><b>Адрес:</b> 109544, Россия, г. Москва, бульвар Энтузиастов, дом 2</li>
-                            <li><b>Телефон:</b> +7 (495) 229-14-41</li>
-                            <li><b>E-mail:</b> info@1c-bitrix.ru</li>
-                            <li><b>Сайт:</b> 1c-bitrix.ru</li>
-                            <li><b>Режим работы:</b> 9:00 до 20:00, Пн-Пт</li>
-                            <li><a href="documents/sidorov.pdf">Положение о подразделении</a></li>
-                        </ul>
+                        <h1 class="card-title">Стипендии и иные виды материальной поддержки</h1>
+                        <h2>Информация о наличии и условиях предоставления стипендий, в том числе локальные нормативные
+                            акты</h2>
+                        <div itemscope="" itemtype="http://obrnadzor.gov.ru/microformats/Grant">
+                            Тег, обрамляющий группу сведений о наличии и условиях предоставления стипендий, должен
+                            содержать специальный атрибут Itemscope itemtype=«http://obrnadzor.gov.ru/microfor mats/
+                            Grant»
+                        </div>
+                        <h2>Информация о наличии общежития, интерната</h2>
+                        <div itemprop="HostelInfo">
+                            Тег, обрамляющий сведения о наличии общежития, интерната, должен содержать специальный
+                            атрибут itemprop=«HostelInfo»
+                        </div>
+                        <h2>Информация о количестве жилых помещений в общежитии, интернате для иногородних
+                            обучающихся</h2>
+                        <div itemprop="HostelNum">
+                            Тег, обрамляющий сведения о количестве мест в общежитии, интернате для иногородних
+                            обучающихся, должен содержать специальный атрибут itemprop=«HostelNum»
+                        </div>
+                        <h2>Копия локального нормативного акта, регламентирующего размер платы за пользование жилым
+                            помещением и коммунальные услуги в общежитии</h2>
+                        <div itemprop="LocalActObSt">
+                            Тег, обрамляющий ссылку на файл локального нормативного акта, регламентирующего размер платы
+                            за пользование жилым помещением и коммунальные услуги в общежитии, должен содержать
+                            специальный атрибут itemprop=«LocalActObSt»
+                        </div>
+                        <h2>Информация об иных видах материальной поддержки обучающихся</h2>
+                        <div itemprop="Support">
+                            Тег, обрамляющий сведения об иных
+                            видах материальной обучающихся, должен специальный itemprop=«Support»
+                        </div>
+                        <h2>Информация о трудоустройстве выпускников</h2>
+                        <div itemprop="GraduateJob">
+                            Тег, обрамляющий сведения о трудоустройстве выпускников, должен содержать специальный
+                            атрибут itemprop= «GraduateJob»
+                        </div>
                     </div>
                 </div>
             </div>
