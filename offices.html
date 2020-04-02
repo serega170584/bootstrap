@@ -10,6 +10,8 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=45a9b564-d5c1-4f62-8151-294375f05de8" type="text/javascript"></script>
+    <script src="scripts/placemark.js"></script>
 </head>
 <body>
 <header>
@@ -277,8 +279,7 @@
                 <div class="card mb-2">
                     <div class="card-body info-entity-page">
                         <h1 class="card-title">Филиалы</h1>
-                        <script type="text/javascript" charset="utf-8" async
-                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A84fbdbb4f3c7b15309bd3af0b8dbf2020202910e4d34f7e1f2184dc6ced2c25e&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                        <div id="map"></div>
                     </div>
                 </div>
             </div>

@@ -420,3 +420,8 @@ ul {
 .info-entity-page label {
     font-size: 0.86rem;
 }
+
+#map {
+    width: 100%;
+    height: 100%;
+}
