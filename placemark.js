@@ -24,7 +24,6 @@ function init() {
         });
 
     myMap.geoObjects
-        .add(myGeoObject)
         .add(new ymaps.Placemark([55.833436, 37.715175], {
             balloonContent: '<strong>серобуромалиновый</strong> цвет'
         }, {
