@@ -14,12 +14,6 @@ function init() {
             geometry: {
                 type: "Point",
                 coordinates: [55.8, 37.8]
-            },
-            // Свойства.
-            properties: {
-                // Контент метки.
-                iconContent: 'Я тащусь',
-                hintContent: 'Ну давай уже тащи'
             }
         }, {
             // Опции.
