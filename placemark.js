@@ -6,7 +6,7 @@ function init() {
             zoom: 10
         }, {
             searchControlProvider: 'yandex#search'
-        }),
+        });
 
     myMap.geoObjects
         .add(new ymaps.Placemark([55.833436, 37.715175], {
