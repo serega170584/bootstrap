@@ -18,5 +18,5 @@ function heapify($a, $i)
 }
 
 for ($i = count($a) - 1; $i > 0; --$i) {
-    $a = heapify($a, $i);
+    $a = heapify($a, ceil($i / 2) - 1);
 }
