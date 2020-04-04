@@ -20,3 +20,4 @@ function heapify($a, $i)
 for ($i = count($a) - 1; $i > 0; --$i) {
     $a = heapify($a, ceil($i / 2) - 1);
 }
+var_dump($a);
