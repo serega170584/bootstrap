@@ -35,13 +35,13 @@ function &buildHeap(&$a, $length)
 $timestamp = microtime(true);
 $b = $a;
 $a = buildHeap($a, count($a));
-var_dump($a);
 for ($i = count($a) - 1; $i >= 0; --$i) {
     $res = $a[$i];
     $a[$i] = $a[0];
     $a[0] = $res;
     $a = buildHeap($a, $i);
 }
+var_dump($a);
 var_dump(microtime(true) - $timestamp);
 
 $timestamp = microtime(true);
