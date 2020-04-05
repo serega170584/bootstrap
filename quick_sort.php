@@ -8,9 +8,7 @@ function partition(&$a, $li, $hi)
     $m = $a[$li];
     while ($lfi < $rgi) {
         $isFinished = false;
-        ++$lfi;
-        while (!$isFinished && $a[$lfi] < $m) {
-            ++$lfi;
+        while (!$isFinished && $a[++$lfi] < $m) {
             $isFinished = ($lfi == $hi);
         }
         $isFinished = false;
