@@ -8,7 +8,8 @@ function partition(&$a, $li, $hi)
     $m = $a[$li];
     while ($lfi < $rgi) {
         $isFinished = false;
-        while (!$isFinished && $a[$lfi] <= $m) {
+        ++$lfi;
+        while (!$isFinished && $a[$lfi] < $m) {
             ++$lfi;
             $isFinished = ($lfi == $hi);
         }
@@ -17,9 +18,6 @@ function partition(&$a, $li, $hi)
             --$rgi;
             $isFinished = ($rgi == $li);
         }
-        var_dump($lfi);
-        var_dump($rgi);
-        die('asd');
         if ($lfi < $rgi) {
             $a = exch($a, $lfi, $rgi);
         }
