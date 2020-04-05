@@ -3,7 +3,7 @@ $a = [7, 1, 2, 4, 3, 5, 8, 6, 9];
 function &heapify($a, $i)
 {
     $isFinished = false;
-    while ($isFinished) {
+    while (!$isFinished) {
         $leftIndex = 2 * $i + 1;
         $rightIndex = 2 * $i + 2;
         $largeIndex = $i;
