@@ -33,6 +33,7 @@ function &buildHeap(&$a, $length)
 }
 
 $timestamp = microtime(true);
+$b = $a;
 $a = buildHeap($a, count($a));
 for ($i = count($a) - 1; $i >= 0; --$i) {
     $res = $a[$i];
@@ -41,3 +42,8 @@ for ($i = count($a) - 1; $i >= 0; --$i) {
     $a = buildHeap($a, $i);
 }
 var_dump(microtime(true) - $timestamp);
+
+$timestamp = microtime(true);
+sort($b);
+var_dump(microtime(true) - $timestamp);
+
