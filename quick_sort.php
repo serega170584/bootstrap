@@ -29,11 +29,8 @@ function partition(&$a, $li, $hi)
 function &quickSort(&$a, $li, $ri)
 {
     $mi = partition($a, $li, $ri);
-//    quickSort($a, $li, $mi - 1);
-    var_dump($mi);
+    quickSort($a, $li, $mi - 1);
     quickSort($a, $mi + 1, $ri);
-//    var_dump($a);
-    die('asd');
     return $a;
 }
 
@@ -45,4 +42,5 @@ function &exch(&$a, $i, $j)
     return $a;
 }
 
-$a = quickSort($a, 0, count($a) - 1);
+var_dump(partition($a, 0, 0));
+//$a = quickSort($a, 0, count($a) - 1);
