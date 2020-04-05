@@ -22,7 +22,7 @@ function partition(&$a, $li, $hi)
             $a = exch($a, $lfi, $rgi);
         }
     }
-    $a = exch($a, $m, $rgi);
+    $a = exch($a, $li, $rgi);
     return $rgi;
 }
 
