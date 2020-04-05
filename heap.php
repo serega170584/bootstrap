@@ -1,7 +1,7 @@
 <?php
-//$a = [2, 1, 7, 4, 9, 5, 8, 3, 6];
-$a = range(1, 1000);
-shuffle($a);
+$a = [2, 1, 7, 4, 9, 5, 8, 3, 6];
+//$a = range(1, 1000);
+//shuffle($a);
 function &heapify(&$a, $i, $length)
 {
     $isFinished = false;
@@ -46,7 +46,7 @@ for ($i = count($a) - 1; $i >= 0; --$i) {
 //var_dump($a);
 var_dump(microtime(true) - $timestamp);
 
-$timestamp = microtime(true);
-sort($b);
-var_dump(microtime(true) - $timestamp);
+//$timestamp = microtime(true);
+//sort($b);
+//var_dump(microtime(true) - $timestamp);
 
