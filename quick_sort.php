@@ -46,3 +46,4 @@ function &exch(&$a, $i, $j)
 }
 
 $a = quickSort($a, 0, count($a) - 1);
+var_dump($a);
