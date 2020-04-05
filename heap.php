@@ -1,16 +1,16 @@
 <?php
 $a = [7, 1, 2, 4, 3, 5, 8, 6, 9];
-function &heapify(&$a, $i)
+function &heapify(&$a, $i, $length)
 {
     $isFinished = false;
     while (!$isFinished) {
         $leftIndex = 2 * $i + 1;
         $rightIndex = 2 * $i + 2;
         $largeIndex = $i;
-        if ($leftIndex < count($a) && $a[$largeIndex] < $a[$leftIndex]) {
+        if ($leftIndex < $length && $a[$largeIndex] < $a[$leftIndex]) {
             $largeIndex = $leftIndex;
         }
-        if ($rightIndex < count($a) && $a[$largeIndex] < $a[$rightIndex]) {
+        if ($rightIndex < $length && $a[$largeIndex] < $a[$rightIndex]) {
             $largeIndex = $rightIndex;
         }
         $isFinished = ($i == $largeIndex);
@@ -24,13 +24,19 @@ function &heapify(&$a, $i)
     return $a;
 }
 
-function &buildHeap(&$a)
+function &buildHeap(&$a, $length)
 {
-    for ($i = ceil((count($a) - 1) / 2 - 1); $i >= 0; --$i) {
-        $a = heapify($a, $i);
+    for ($i = ceil(($length - 1) / 2 - 1); $i >= 0; --$i) {
+        $a = heapify($a, $i, $length);
     }
     return $a;
 }
 
-$a = buildHeap($a);
+$a = buildHeap($a, count($a));
+for ($i = count($a) - 1; $i >= 0; --$i) {
+    $res = $a[$i];
+    $a[$i] = $a[0];
+    $a[0] = $res;
+    $a = buildHeap($a, $i);
+}
 var_dump($a);
