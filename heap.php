@@ -46,7 +46,7 @@ for ($i = count($a) - 1; $i >= 0; --$i) {
 //var_dump($a);
 var_dump(microtime(true) - $timestamp);
 
-//$timestamp = microtime(true);
-//sort($b);
-//var_dump(microtime(true) - $timestamp);
+$timestamp = microtime(true);
+sort($b);
+var_dump(microtime(true) - $timestamp);
 
