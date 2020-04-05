@@ -8,7 +8,7 @@ function partition(&$a, $li, $hi)
     $m = $a[$li];
     while ($lfi < $rgi) {
         $isFinished = false;
-        while (!$isFinished && $a[$lfi] < $m) {
+        while (!$isFinished && $a[$lfi] <= $m) {
             ++$lfi;
             $isFinished = ($lfi == $hi);
         }
@@ -17,9 +17,6 @@ function partition(&$a, $li, $hi)
             --$rgi;
             $isFinished = ($rgi == $li);
         }
-        var_dump($lfi);
-        var_dump($rgi);
-        die('asd');
         if ($lfi < $rgi) {
             $a = exch($a, $lfi, $rgi);
         }
@@ -31,6 +28,8 @@ function partition(&$a, $li, $hi)
 function &quickSort(&$a, $li, $ri)
 {
     $mi = partition($a, $li, $ri);
+    var_dump($a);
+    die('asd');
     quickSort($a, $li, $mi - 1);
     quickSort($a, $mi + 1, $ri);
     return $a;
