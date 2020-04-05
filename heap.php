@@ -1,5 +1,5 @@
 <?php
-$a = [9, 1, 2, 4, 3, 5, 8, 6, 7];
+$a = [7, 1, 2, 4, 3, 5, 8, 6, 9];
 function &heapify($a, $i)
 {
     $isFinished = false;
