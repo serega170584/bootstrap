@@ -1,5 +1,7 @@
 <?php
-$a = [2, 1, 7, 4, 9, 5, 8, 3, 6];
+//$a = [2, 1, 7, 4, 9, 5, 8, 3, 6];
+$a = range(1, 100000);
+shuffle($a);
 function &heapify(&$a, $i, $length)
 {
     $isFinished = false;
@@ -41,7 +43,7 @@ for ($i = count($a) - 1; $i >= 0; --$i) {
     $a[0] = $res;
     $a = buildHeap($a, $i);
 }
-var_dump($a);
+//var_dump($a);
 var_dump(microtime(true) - $timestamp);
 
 $timestamp = microtime(true);
