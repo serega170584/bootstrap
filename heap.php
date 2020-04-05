@@ -15,7 +15,12 @@ function &heapify($a, $i)
         }
         $a[$i] = $a[$largeIndex];
         $isFinished = ($i == $largeIndex);
-        $i = $largeIndex;
+        if (!$isFinished) {
+            $res = $a[$i];
+            $a[$i] = $a[$largeIndex];
+            $a[$largeIndex] = $res;
+            $i = $largeIndex;
+        }
     }
     return $a;
 }
