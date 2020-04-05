@@ -24,7 +24,13 @@ function &heapify(&$a, $i)
     return $a;
 }
 
-for ($i = ceil((count($a) - 1) / 2 - 1); $i >= 0; --$i) {
-    $a = heapify($a, $i);
+function &buildHeap(&$a)
+{
+    for ($i = ceil((count($a) - 1) / 2 - 1); $i >= 0; --$i) {
+        $a = heapify($a, $i);
+    }
+    return &$a;
 }
+
+$a = buildHeap($a);
 var_dump($a);
