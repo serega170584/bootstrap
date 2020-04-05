@@ -10,7 +10,7 @@ function &heapify($a, $i)
         if ($leftIndex < count($a) && $a[$largeIndex] < $a[$leftIndex]) {
             $largeIndex = $leftIndex;
         }
-        if ($rightIndex > count($a) && $a[$largeIndex] < $a[$rightIndex]) {
+        if ($rightIndex < count($a) && $a[$largeIndex] < $a[$rightIndex]) {
             $largeIndex = $rightIndex;
         }
         $a[$i] = $a[$largeIndex];
