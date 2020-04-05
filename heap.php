@@ -29,7 +29,7 @@ function &buildHeap(&$a)
     for ($i = ceil((count($a) - 1) / 2 - 1); $i >= 0; --$i) {
         $a = heapify($a, $i);
     }
-    return &$a;
+    return $a;
 }
 
 $a = buildHeap($a);
