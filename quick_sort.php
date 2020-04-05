@@ -28,6 +28,9 @@ function partition(&$a, $li, $hi)
 
 function &quickSort(&$a, $li, $ri)
 {
+    if ($li >= $ri) {
+        return $a;
+    }
     $mi = partition($a, $li, $ri);
     quickSort($a, $li, $mi - 1);
     quickSort($a, $mi + 1, $ri);
@@ -42,5 +45,4 @@ function &exch(&$a, $i, $j)
     return $a;
 }
 
-var_dump(partition($a, 0, 0));
-//$a = quickSort($a, 0, count($a) - 1);
+$a = quickSort($a, 0, count($a) - 1);
