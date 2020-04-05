@@ -30,8 +30,9 @@ function &quickSort(&$a, $li, $ri)
 {
     $mi = partition($a, $li, $ri);
 //    quickSort($a, $li, $mi - 1);
-    var_dump($a);
     quickSort($a, $mi + 1, $ri);
+    var_dump($a);
+    die('asd');
     return $a;
 }
 
