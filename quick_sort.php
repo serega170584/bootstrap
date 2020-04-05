@@ -17,6 +17,9 @@ function partition(&$a, $li, $hi)
             --$rgi;
             $isFinished = ($rgi == $li);
         }
+        var_dump($lfi);
+        var_dump($rgi);
+        die('asd');
         if ($lfi < $rgi) {
             $a = exch($a, $lfi, $rgi);
         }
