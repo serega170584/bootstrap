@@ -33,6 +33,7 @@ function &quickSort(&$a, $li, $ri)
     }
     $mi = partition($a, $li, $ri);
     var_dump($a);
+    var_dump($mi);
     die('asd');
     quickSort($a, $li, $mi - 1);
     quickSort($a, $mi + 1, $ri);
@@ -46,6 +47,7 @@ function &exch(&$a, $i, $j)
     $a[$j] = $res;
     return $a;
 }
+
 $timestamp = microtime(true);
 $a = quickSort($a, 0, count($a) - 1);
 var_dump($a);
