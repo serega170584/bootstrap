@@ -1,7 +1,7 @@
 <?php
 $a = [2, 1, 7, 4, 2, 9, 5, 8, 2, 3, 2, 6];
-$a = range(1, 1000);
-shuffle($a);
+//$a = range(1, 1000);
+//shuffle($a);
 
 function partition(&$a, $li, $hi)
 {
