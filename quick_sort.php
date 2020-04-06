@@ -46,4 +46,5 @@ function &exch(&$a, $i, $j)
 }
 $timestamp = microtime(true);
 $a = quickSort($a, 0, count($a) - 1);
-var_dump(microtime(true) - $timestamp);
+var_dump($a);
+//var_dump(microtime(true) - $timestamp);
