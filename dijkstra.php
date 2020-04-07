@@ -19,7 +19,5 @@ array_map(function ($items) {
     $items = array_merge([
         implode(' ', array_fill(0, count($items), '%d'))
     ], $items);
-    var_dump($items);
-    die('asd');
-    call_user_func('sprintf', $items);
+    call_user_func_array('sprintf', $items);
 }, $a);
