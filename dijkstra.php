@@ -19,5 +19,5 @@ array_map(function ($items) {
     $items = array_merge([
         implode(' ', array_fill(0, count($items), '%d'))
     ], $items);
-    sprintf(...$items);
+    call_user_func('sprintf', $items);
 }, $a);
