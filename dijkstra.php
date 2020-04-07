@@ -7,7 +7,7 @@ function &generateArray($count)
             if ($i == $j) {
                 $a[$i][$j] = 0;
             } elseif ($i > $j) {
-                $a[$i][$j] = $a[$j][$i] = rand(10);
+                $a[$i][$j] = $a[$j][$i] = rand(1, 10);
             }
         }
     }
@@ -19,5 +19,7 @@ array_map(function ($items) {
     $items = array_merge([
         implode(' ', array_fill(0, count($items), '%d'))
     ], $items);
+    var_dump($items);
+    die('asd');
     call_user_func('sprintf', $items);
 }, $a);
