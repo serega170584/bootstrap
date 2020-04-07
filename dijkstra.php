@@ -16,6 +16,8 @@ function &generateArray($count)
 
 $a = generateArray(8);
 array_map(function ($items) {
-    $items = array_merge(implode(' ', array_fill(0, count($items), '%d'), $items);
+    $items = array_merge([
+        implode(' ', array_fill(0, count($items), '%d'))
+    ], $items);
     sprintf(...$items);
 }, $a);
