@@ -17,7 +17,7 @@ function &generateArray($count)
 $a = generateArray(8);
 array_map(function ($items) {
     $items = array_merge([
-        implode(' ', array_fill(0, count($items), '%02d'))
+        implode(' ', array_fill(0, count($items), '%06d'))
     ], $items);
     echo call_user_func_array('sprintf', $items) . "\r\n";
 }, $a);
