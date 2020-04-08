@@ -29,11 +29,10 @@ $vertexWeight = 0;
 $infinity = 100000;
 $weights = [$vertex => 0];
 $minWeightVertex = 0;
-$minWeight = 0;
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
+    $minWeight = $infinity;
     for ($i = 0; $i < $vertexesCount; ++$i) {
         if ($i != $vertex && $a[$vertex][$i] != $infinity && !in_array($i, $visitedVertexes)) {
-            echo $i;
             $weights[$i] = $weights[$vertex] + $a[$vertex][$i];
             if ($weights[$i] < $minWeight) {
                 $minWeight = $weights[$i];
