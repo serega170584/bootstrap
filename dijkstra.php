@@ -43,5 +43,7 @@ while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     $visitedVertexes[] = $vertex;
     sort($visitedVertexes);
     var_dump($visitedVertexes);
+    var_dump($minWeightVertex);
+    die('asd');
     $vertex = $minWeightVertex;
 }
