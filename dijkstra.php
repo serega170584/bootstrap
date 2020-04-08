@@ -7,7 +7,7 @@ function &generateArray($count)
             if ($i == $j) {
                 $a[$i][$j] = 0;
             } elseif ($i > $j) {
-                $a[$i][$j] = $a[$j][$i] = rand(1, 10);
+                $a[$i][$j] = $a[$j][$i] = ($i - $j < 4) ? $i - $j : 100000;
             }
         }
     }
@@ -21,3 +21,4 @@ array_map(function ($items) {
     ], $items);
     echo call_user_func_array('sprintf', $items) . "\r\n";
 }, $a);
+
