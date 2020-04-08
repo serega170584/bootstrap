@@ -14,7 +14,8 @@ function &generateArray($count)
     return $a;
 }
 
-$a = generateArray(8);
+$vertexesCount = 8;
+$a = generateArray($vertexesCount);
 array_map(function ($items) {
     $items = array_merge([
         implode(' ', array_fill(0, count($items), '%06d'))
@@ -22,3 +23,25 @@ array_map(function ($items) {
     echo call_user_func_array('sprintf', $items) . "\r\n";
 }, $a);
 
+$visitedVertexes = [];
+$vertex = 0;
+$vertexWeight = 0;
+$infinity = 100000;
+$weights = [$vertex => 0];
+$minWeightVertex = 0;
+$minWeight = 0;
+while ($visitedVertexes != range(0, $vertexesCount - 1)) {
+    for ($i = 0; $i < $vertexesCount; ++$i) {
+        if ($a[$vertex][$i] != $infinity && !in_array($i, $visitedVertexes)) {
+            $weights[$i] = $weights[$vertex] + $a[$vertex][$i];
+            if ($weights[$i] < $minWeight) {
+                $minWeight = $weights[$i];
+                $minWeightVertex = $i;
+            }
+        }
+    }
+    $visitedVertexes[] = $vertex;
+    sort($visitedVertexes);
+    $vertex = $minWeightVertex;
+}
+var_dump($minWeight);
