@@ -33,20 +33,17 @@ $minWeightVertex = 0;
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     $minWeight = $infinity;
     for ($i = 0; $i < $vertexesCount; ++$i) {
-        if ($i != $vertex && $a[$vertex][$i] != $infinity && !in_array($i, $visitedVertexes)) {
+        if ($a[$vertex][$i] != $infinity && !in_array($i, $visitedVertexes)) {
             if ($weights[$i] > $weights[$vertex] + $a[$vertex][$i]) {
                 $weights[$i] = $weights[$vertex] + $a[$vertex][$i];
             }
             if ($weights[$i] < $minWeight) {
                 $minWeight = $weights[$i];
-                var_dump($minWeight);
                 $minWeightVertex = $i;
             }
         }
     }
     $visitedVertexes[] = $vertex;
-    var_dump($visitedVertexes);
     sort($visitedVertexes);
     $vertex = $minWeightVertex;
 }
-//var_dump($visitedVertexes);
