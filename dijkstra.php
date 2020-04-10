@@ -47,3 +47,5 @@ while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     sort($visitedVertexes);
     $vertex = $minWeightVertex;
 }
+var_dump($visitedVertexes);
+var_dump($minWeight);
