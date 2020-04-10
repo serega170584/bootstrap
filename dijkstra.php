@@ -39,6 +39,7 @@ while ($visitedVertexes != range(0, $vertexesCount - 1)) {
             }
             if ($weights[$i] < $minWeight) {
                 $minWeight = $weights[$i];
+                var_dump($minWeight);
                 $minWeightVertex = $i;
             }
         }
@@ -47,5 +48,4 @@ while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     sort($visitedVertexes);
     $vertex = $minWeightVertex;
 }
-var_dump($visitedVertexes);
-var_dump($minWeight);
+//var_dump($visitedVertexes);
