@@ -61,3 +61,5 @@ while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     unset($weights[$vertex]);
     asort($weights);
 }
+var_dump($weights);
+var_dump($visitedVertexes);
