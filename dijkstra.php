@@ -28,19 +28,19 @@ function getWeights(
     $a,
     $vertex,
     $infinity,
-    $weight,
-    $visitedVertexes
+    $weight
 )
 {
-    return array_map(function ($val, $key) use ($a, $vertex, $infinity, $weight, $visitedVertexes) {
-        if ($vertex != $key && $a[$vertex][$key] != $infinity && !in_array($key, $visitedVertexes)) {
+    $keys = array_keys($weights);
+    return array_combine($keys, array_map(function ($val, $key) use ($a, $vertex, $infinity, $weight) {
+        if ($vertex != $key && $a[$vertex][$key] != $infinity) {
             $calcWeight = $weight + $a[$vertex][$key];
             if ($val > $calcWeight) {
                 $val = $calcWeight;
             }
         }
         return $val;
-    }, $weights, array_keys($weights));
+    }, $weights, $keys));
 }
 
 $visitedVertexes = [];
@@ -49,14 +49,14 @@ $vertexWeight = 0;
 $infinity = 100000;
 $weights = array_fill(0, $vertexesCount, $infinity);
 $weight = $weights[$vertex] = 0;
-$weights = getWeights($weights, $a, $vertex, $infinity, $weight, $visitedVertexes);
+$weights = getWeights($weights, $a, $vertex, $infinity, $weight);
 $visitedVertexes[] = $vertex;
 unset($weights[$vertex]);
 asort($weights);
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     $vertex = array_keys($weights)[0];
     $weight = $weights[$vertex];
-    $weights = getWeights($weights, $a, $vertex, $infinity, $weight, $visitedVertexes);
+    $weights = getWeights($weights, $a, $vertex, $infinity, $weight);
     var_dump($weights);
     die('asd');
     $visitedVertexes[] = $vertex;
