@@ -55,7 +55,6 @@ asort($weights);
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     $vertex = array_keys($weights)[0];
     var_dump($vertex);
-    die('asd');
     $weight = $weights[$vertex];
     $weights = getWeights($weights, $a, $vertex, $infinity, $weight);
     $visitedVertexes[] = $vertex;
