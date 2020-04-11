@@ -51,6 +51,7 @@ $weights = array_fill(0, $vertexesCount, $infinity);
 $weight = $weights[$vertex] = 0;
 $weights = getWeights($weights, $a, $vertex, $infinity, $weight);
 $visitedVertexes[] = $vertex;
+$visitedWeights[$vertex] = $weights[$vertex];
 unset($weights[$vertex]);
 asort($weights);
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
@@ -58,8 +59,9 @@ while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     $weight = $weights[$vertex];
     $weights = getWeights($weights, $a, $vertex, $infinity, $weight);
     $visitedVertexes[] = $vertex;
+    $visitedWeights[$vertex] = $weights[$vertex];
     unset($weights[$vertex]);
     asort($weights);
 }
-var_dump($weights);
+var_dump($visitedWeights);
 var_dump($visitedVertexes);
