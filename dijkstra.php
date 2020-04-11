@@ -52,13 +52,9 @@ $weight = $weights[$vertex] = 0;
 $weights = getWeights($weights, $a, $vertex, $infinity, $weight, $visitedVertexes);
 $visitedVertexes[] = $vertex;
 unset($weights[$vertex]);
-var_dump($weights);
 asort($weights);
-var_dump($weights);
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     $vertex = array_keys($weights)[0];
-    var_dump($weights);
-    die('asd');
     $weight = $weights[$vertex];
     $weights = getWeights($weights, $a, $vertex, $infinity, $weight, $visitedVertexes);
     var_dump($weights);
