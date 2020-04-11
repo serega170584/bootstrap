@@ -23,28 +23,40 @@ array_map(function ($items) {
     echo call_user_func_array('sprintf', $items) . "\r\n";
 }, $a);
 
+function &getWeights(
+    $weights,
+    $a,
+    $vertex,
+    $infinity,
+    $weight
+)
+{
+    return array_map(function ($val, $key) use ($a, $vertex, $infinity, $weight) {
+        if ($vertex != $key && $a[$vertex][$key] != $infinity) {
+            $calcWeight = $weight + $a[$vertex][$key];
+            if ($val > $calcWeight) {
+                $val = $calcWeight;
+            }
+        }
+        return $val;
+    }, $weights, array_keys($weights));
+}
+
 $visitedVertexes = [];
 $vertex = 0;
 $vertexWeight = 0;
 $infinity = 100000;
 $weights = array_fill(0, $vertexesCount, $infinity);
-$weights[$vertex] = 0;
-$minWeightVertex = 0;
+$weight = $weights[$vertex] = 0;
+$weights = getWeights($weights, $a, $vertex, $infinity, $weight);
+$visitedVertexes[] = $vertex;
+unset($weights[$vertex]);
+asort($weights);
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
-    $minWeight = $infinity;
-    for ($i = 0; $i < $vertexesCount; ++$i) {
-        if ($a[$vertex][$i] != $infinity && !in_array($i, $visitedVertexes)) {
-            if ($weights[$i] > $weights[$vertex] + $a[$vertex][$i]) {
-                $weights[$i] = $weights[$vertex] + $a[$vertex][$i];
-            }
-            if ($weights[$i] < $minWeight) {
-                $minWeight = $weights[$i];
-                $minWeightVertex = $i;
-            }
-        }
-    }
+    $vertex = array_key_first($weights);
+    $weight = $weights[$vertex];
+    $weights = getWeights($weights, $a, $vertex, $infinity, $weight);
     $visitedVertexes[] = $vertex;
-    sort($visitedVertexes);
-    $vertex = $minWeightVertex;
-    var_dump($vertex);
+    unset($weights[$vertex]);
+    asort($weights);
 }
