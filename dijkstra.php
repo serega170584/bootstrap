@@ -7,7 +7,7 @@ function &generateArray($count)
             if ($i == $j) {
                 $a[$i][$j] = 0;
             } elseif ($i > $j) {
-                $a[$i][$j] = $a[$j][$i] = ($i - $j < 4) ? $i - $j : 100000;
+                $a[$i][$j] = $a[$j][$i] = ($i - $j < 4) ? ($i - $j) * 2 : 100000;
             }
         }
     }
