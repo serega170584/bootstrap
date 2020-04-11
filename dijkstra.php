@@ -23,7 +23,7 @@ array_map(function ($items) {
     echo call_user_func_array('sprintf', $items) . "\r\n";
 }, $a);
 
-function &getWeights(
+function getWeights(
     $weights,
     $a,
     $vertex,
