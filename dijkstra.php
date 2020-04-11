@@ -53,8 +53,9 @@ $weights = getWeights($weights, $a, $vertex, $infinity, $weight, $visitedVertexe
 $visitedVertexes[] = $vertex;
 unset($weights[$vertex]);
 var_dump($weights);
-die('asd');
 asort($weights);
+var_dump($weights);
+die('asd');
 while ($visitedVertexes != range(0, $vertexesCount - 1)) {
     $vertex = array_keys($weights)[0];
     var_dump($vertex);
