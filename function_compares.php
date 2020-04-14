@@ -26,6 +26,7 @@ while ($key != count($arr)) {
         if ($unvisitedSignIndexesCount > 1) {
             $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
         }
+        var_dump($prevSignIndex);
         $firstAfterUnvisitedVisitedSignIndex = $signIndexes[count($signIndexes) - 1];
         if ($visitedSignIndexes) {
             $firstAfterUnvisitedVisitedSignIndex = $visitedSignIndexes[0];
@@ -50,9 +51,9 @@ while ($key != count($arr)) {
         $signIndexes = array_map(function ($val) use ($firstAfterUnvisitedVisitedSignIndex) {
             return ($firstAfterUnvisitedVisitedSignIndex <= $val) ? ++$val : false;
         }, $signIndexes);
-        var_dump($arr);
-        var_dump($visitedSignIndexes);
-        var_dump($signIndexes);
+//        var_dump($arr);
+//        var_dump($visitedSignIndexes);
+//        var_dump($signIndexes);
         if ($key > 7) {
             die('asd');
         }
