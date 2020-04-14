@@ -42,10 +42,10 @@ while ($key != count($arr)) {
         );
         $visitedSignIndexes[] = $firstAfterUnvisitedVisitedSignIndex;
         $visitedSignIndexes = array_map(function ($val) use ($firstAfterUnvisitedVisitedSignIndex) {
-            return ($firstAfterUnvisitedVisitedSignIndex <= $val) ? $val : false;
+            return ($firstAfterUnvisitedVisitedSignIndex <= $val) ? ++$val : false;
         }, $visitedSignIndexes);
         $signIndexes = array_map(function ($val) use ($firstAfterUnvisitedVisitedSignIndex) {
-            return ($firstAfterUnvisitedVisitedSignIndex <= $val) ? $val : false;
+            return ($firstAfterUnvisitedVisitedSignIndex <= $val) ? ++$val : false;
         }, $signIndexes);
         var_dump($arr);
         var_dump($visitedSignIndexes);
