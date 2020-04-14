@@ -13,7 +13,7 @@ $arr = [
 ];
 $key = 0;
 $isContinue = true;
-while ($key != count($arr) - 1) {
+while ($key != count($arr)) {
     while ($isContinue) {
         if ($arr[$key] == '+' || $arr[$key] == '*') {
             $signIndex = $key;
@@ -26,6 +26,7 @@ while ($key != count($arr) - 1) {
             );
             $isContinue = false;
             ++$signIndex;
+            ++$key;
         }
         ++$key;
     }
