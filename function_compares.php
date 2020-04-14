@@ -24,7 +24,7 @@ while ($key != count($arr)) {
                 ['('],
                 array_slice($arr, $signIndex)
             );
-            $isContinue = true;
+            $isContinue = false;
             ++$signIndex;
         }
         ++$key;
