@@ -22,7 +22,8 @@ while ($key != count($arr)) {
     if ($arr[$key] == ')') {
         $unvisitedSignIndexes = array_values(array_diff($signIndexes, $visitedSignIndexes));
         $unvisitedSignIndexesCount = count($unvisitedSignIndexes);
-        var_dump($unvisitedSignIndexes);
+        var_dump($signIndexes);
+        var_dump($visitedSignIndexes);
         $prevSignIndex = false;
         if ($unvisitedSignIndexesCount > 1) {
             $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
