@@ -13,19 +13,41 @@ $arr = [
 ];
 $key = 0;
 $isContinue = true;
+$visitedSignIndexes = [];
+$signIndexes = [];
 while ($key != count($arr)) {
     while ($isContinue) {
         if ($arr[$key] == '+' || $arr[$key] == '*') {
-            $signIndex = $key;
+            $signIndexes[] = $key;
         }
         if ($arr[$key] == ')') {
+            $unvisitedSignIndexes = array_diff($signIndexes, $visitedSignIndexes);
+            $unvisitedSignIndexesCount = count($unvisitedSignIndexes);
+            $prevSignIndex = false;
+            if ($unvisitedSignIndexesCount > 1) {
+                $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
+            }
+            $firstAfterUnvisitedVisitedSignIndex = $signIndexes[count($signIndexes) - 1];
+            if ($visitedSignIndexes) {
+                $firstAfterUnvisitedVisitedSignIndex = $visitedSignIndexes[0];
+            }
+            if ($prevSignIndex !== false) {
+                $firstAfterUnvisitedVisitedSignIndex = array_filter(array_map(function ($val) use ($prevSignIndex) {
+                    return ($prevSignIndex < $val) ? $val : false;
+                }, $visitedSignIndexes))[0];
+            }
             $arr = array_merge(
-                array_slice($arr, 0, $signIndex - 1),
+                array_slice($arr, 0, $firstAfterUnvisitedVisitedSignIndex - 1),
                 ['('],
-                array_slice($arr, $signIndex)
+                array_slice($arr, $firstAfterUnvisitedVisitedSignIndex - 1)
             );
+            var_dump($arr);
+            die('asd');
             $isContinue = false;
-            ++$signIndex;
+            $visitedSignIndexes[] = $signIndex;
+            $visitedSignIndexes = array_map(function ($val) {
+                return ++$val;
+            }, $visitedSignIndexes);
             ++$key;
         }
         ++$key;
