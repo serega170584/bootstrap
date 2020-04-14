@@ -26,8 +26,6 @@ while ($key != count($arr)) {
         if ($unvisitedSignIndexesCount > 1) {
             $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
         }
-        var_dump($arr);
-        var_dump($prevSignIndex);
         $firstAfterUnvisitedVisitedSignIndex = $signIndexes[count($signIndexes) - 1];
         if ($visitedSignIndexes) {
             $firstAfterUnvisitedVisitedSignIndex = $visitedSignIndexes[0];
@@ -40,6 +38,7 @@ while ($key != count($arr)) {
                 $firstAfterUnvisitedVisitedSignIndex = $firstAfterUnvisitedVisitedSign[0];
             }
         }
+        var_dump($firstAfterUnvisitedVisitedSignIndex);
         $arr = array_merge(
             array_slice($arr, 0, $firstAfterUnvisitedVisitedSignIndex - 1),
             ['('],
