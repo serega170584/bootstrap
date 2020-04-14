@@ -35,13 +35,13 @@ while ($key != count($arr)) {
                 $firstAfterUnvisitedVisitedSignIndex = $firstAfterUnvisitedVisitedSign[0];
             }
         }
-        $sliceIndex = $firstAfterUnvisitedVisitedSignIndex ?: $key;
+        $sliceIndex = $firstAfterUnvisitedVisitedSignIndex ?: $signIndexes[count($signIndexes) - 1];
         $arr = array_merge(
             array_slice($arr, 0, $sliceIndex - 1),
             ['('],
             array_slice($arr, $sliceIndex - 1)
         );
-        $visitedSignIndexes[] = $key;
+        $visitedSignIndexes[] = $sliceIndex;
         $visitedSignIndexes = array_map(function ($val) use ($sliceIndex) {
             return ($sliceIndex <= $val) ? ++$val : false;
         }, $visitedSignIndexes);
