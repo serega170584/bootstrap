@@ -37,7 +37,6 @@ while ($key != count($arr)) {
                 $firstAfterUnvisitedVisitedSignIndex = $firstAfterUnvisitedVisitedSign[0];
             }
         }
-//        var_dump($firstAfterUnvisitedVisitedSignIndex);
         $sliceIndex = $firstAfterUnvisitedVisitedSignIndex ?: $signIndexes[count($signIndexes) - 1];
         $arr = array_merge(
             array_slice($arr, 0, $sliceIndex - 1),
@@ -51,7 +50,7 @@ while ($key != count($arr)) {
         $signIndexes = array_map(function ($val) use ($sliceIndex) {
             return ($sliceIndex <= $val) ? ++$val : $val;
         }, $signIndexes);
-//        var_dump($arr);
+        var_dump($arr);
 //        var_dump($visitedSignIndexes);
 //        var_dump($signIndexes);
 //        if ($key > 7) {
