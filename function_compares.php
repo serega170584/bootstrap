@@ -26,6 +26,7 @@ while ($key != count($arr)) {
         if ($unvisitedSignIndexesCount > 1) {
             $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
         }
+        var_dump($arr);
         var_dump($prevSignIndex);
         $firstAfterUnvisitedVisitedSignIndex = $signIndexes[count($signIndexes) - 1];
         if ($visitedSignIndexes) {
