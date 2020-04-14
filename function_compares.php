@@ -26,10 +26,7 @@ while ($key != count($arr)) {
         if ($unvisitedSignIndexesCount > 1) {
             $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
         }
-        $firstAfterUnvisitedVisitedSignIndex = $signIndexes[count($signIndexes) - 1];
-        if ($visitedSignIndexes) {
-            $firstAfterUnvisitedVisitedSignIndex = $visitedSignIndexes[0];
-        }
+        $firstAfterUnvisitedVisitedSignIndex = false;
         if ($prevSignIndex !== false) {
             $firstAfterUnvisitedVisitedSign = array_filter(array_map(function ($val) use ($prevSignIndex) {
                 return ($prevSignIndex < $val) ? $val : false;
