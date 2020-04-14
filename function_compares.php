@@ -35,6 +35,7 @@ while ($key != count($arr)) {
         var_dump($arr);
         die('asd');
     }
+    ++$key;
 }
 //while ($key != count($arr)) {
 //    if ($arr[$key] == '+' || $arr[$key] == '*') {
