@@ -50,7 +50,9 @@ while ($key != count($arr)) {
         var_dump($arr);
         var_dump($visitedSignIndexes);
         var_dump($signIndexes);
-        die('asd');
+        if ($key > 7) {
+            die('asd');
+        }
         ++$key;
     }
     ++$key;
