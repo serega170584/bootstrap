@@ -15,49 +15,70 @@ $key = 0;
 $isContinue = true;
 $visitedSignIndexes = [];
 $signIndexes = [];
+$openBrackets = [];
 while ($key != count($arr)) {
     if ($arr[$key] == '+' || $arr[$key] == '*') {
         $signIndexes[] = $key;
+        $openBrackets[$key] = $key - 1;
+        if ($arr[$key - 1] == ')') {
+            $openBrackets[$key] = $openBrackets[$key - 1];
+        }
     }
     if ($arr[$key] == ')') {
-        $unvisitedSignIndexes = array_values(array_diff($signIndexes, $visitedSignIndexes));
-        $unvisitedSignIndexesCount = count($unvisitedSignIndexes);
-        $prevSignIndex = false;
-        if ($unvisitedSignIndexesCount > 1) {
-            $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
-        }
-        $firstAfterUnvisitedVisitedSignIndex = false;
-        if ($prevSignIndex !== false) {
-            $firstAfterUnvisitedVisitedSign = array_filter(array_map(function ($val) use ($prevSignIndex) {
-                return ($prevSignIndex < $val) ? $val : false;
-            }, $visitedSignIndexes));
-            if ($firstAfterUnvisitedVisitedSign) {
-                $firstAfterUnvisitedVisitedSignIndex = $firstAfterUnvisitedVisitedSign[0];
-            }
-        }
-        $sliceIndex = $firstAfterUnvisitedVisitedSignIndex ?: $unvisitedSignIndexes[count($unvisitedSignIndexes) - 1];
+        $signIndex = array_pop($signIndexes);
+        $openBrackets[$key] = $openBrackets[$signIndex];
         $arr = array_merge(
-            array_slice($arr, 0, $sliceIndex - 1),
+            array_slice($arr, 0, $openBrackets[$signIndex]),
             ['('],
-            array_slice($arr, $sliceIndex - 1)
+            array_slice($arr, $openBrackets[$signIndex])
         );
-        $visitedSignIndexes[] = $sliceIndex;
-        $visitedSignIndexes = array_map(function ($val) use ($sliceIndex) {
-            return ($sliceIndex <= $val) ? ++$val : $val;
-        }, $visitedSignIndexes);
-        $signIndexes = array_map(function ($val) use ($sliceIndex) {
-            return ($sliceIndex <= $val) ? ++$val : $val;
-        }, $signIndexes);
-//        var_dump($arr);
-//        var_dump($visitedSignIndexes);
-//        var_dump($signIndexes);
-//        if ($key > 7) {
-//            die('asd');
-//        }
-        ++$key;
+        var_dump($arr);
+        die('asd');
     }
-    ++$key;
 }
+//while ($key != count($arr)) {
+//    if ($arr[$key] == '+' || $arr[$key] == '*') {
+//        $signIndexes[] = $key;
+//    }
+//    if ($arr[$key] == ')') {
+//        $unvisitedSignIndexes = array_values(array_diff($signIndexes, $visitedSignIndexes));
+//        $unvisitedSignIndexesCount = count($unvisitedSignIndexes);
+//        $prevSignIndex = false;
+//        if ($unvisitedSignIndexesCount > 1) {
+//            $prevSignIndex = $unvisitedSignIndexes[$unvisitedSignIndexesCount - 2];
+//        }
+//        $firstAfterUnvisitedVisitedSignIndex = false;
+//        if ($prevSignIndex !== false) {
+//            $firstAfterUnvisitedVisitedSign = array_filter(array_map(function ($val) use ($prevSignIndex) {
+//                return ($prevSignIndex < $val) ? $val : false;
+//            }, $visitedSignIndexes));
+//            if ($firstAfterUnvisitedVisitedSign) {
+//                $firstAfterUnvisitedVisitedSignIndex = $firstAfterUnvisitedVisitedSign[0];
+//            }
+//        }
+//        $sliceIndex = $firstAfterUnvisitedVisitedSignIndex ?: $unvisitedSignIndexes[count($unvisitedSignIndexes) - 1];
+//        $arr = array_merge(
+//            array_slice($arr, 0, $sliceIndex - 1),
+//            ['('],
+//            array_slice($arr, $sliceIndex - 1)
+//        );
+//        $visitedSignIndexes[] = $sliceIndex;
+//        $visitedSignIndexes = array_map(function ($val) use ($sliceIndex) {
+//            return ($sliceIndex <= $val) ? ++$val : $val;
+//        }, $visitedSignIndexes);
+//        $signIndexes = array_map(function ($val) use ($sliceIndex) {
+//            return ($sliceIndex <= $val) ? ++$val : $val;
+//        }, $signIndexes);
+////        var_dump($arr);
+////        var_dump($visitedSignIndexes);
+////        var_dump($signIndexes);
+////        if ($key > 7) {
+////            die('asd');
+////        }
+//        ++$key;
+//    }
+//    ++$key;
+//}
 var_dump($arr);
 die('asd');
 //$a = 1;
