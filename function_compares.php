@@ -46,10 +46,10 @@ while ($key != count($arr)) {
         );
         $visitedSignIndexes[] = $sliceIndex;
         $visitedSignIndexes = array_map(function ($val) use ($sliceIndex) {
-            return ($sliceIndex <= $val) ? ++$val : false;
+            return ($sliceIndex <= $val) ? ++$val : $val;
         }, $visitedSignIndexes);
         $signIndexes = array_map(function ($val) use ($sliceIndex) {
-            return ($sliceIndex <= $val) ? ++$val : false;
+            return ($sliceIndex <= $val) ? ++$val : $val;
         }, $signIndexes);
 //        var_dump($arr);
 //        var_dump($visitedSignIndexes);
