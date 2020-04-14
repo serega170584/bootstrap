@@ -48,12 +48,12 @@ while ($key != count($arr)) {
         $signIndexes = array_map(function ($val) use ($sliceIndex) {
             return ($sliceIndex <= $val) ? ++$val : false;
         }, $signIndexes);
-        var_dump($arr);
+//        var_dump($arr);
 //        var_dump($visitedSignIndexes);
 //        var_dump($signIndexes);
-        if ($key > 7) {
-            die('asd');
-        }
+//        if ($key > 7) {
+//            die('asd');
+//        }
         ++$key;
     }
     ++$key;
