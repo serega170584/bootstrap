@@ -20,7 +20,7 @@ while ($key != count($arr)) {
         $signIndexes[] = $key;
     }
     if ($arr[$key] == ')') {
-        $unvisitedSignIndexes = array_diff($signIndexes, $visitedSignIndexes);
+        $unvisitedSignIndexes = array_values(array_diff($signIndexes, $visitedSignIndexes));
         $unvisitedSignIndexesCount = count($unvisitedSignIndexes);
         $prevSignIndex = false;
         if ($unvisitedSignIndexesCount > 1) {
