@@ -35,7 +35,8 @@ while ($key != count($arr)) {
                 $firstAfterUnvisitedVisitedSignIndex = $firstAfterUnvisitedVisitedSign[0];
             }
         }
-        $sliceIndex = $firstAfterUnvisitedVisitedSignIndex ?: $signIndexes[count($signIndexes) - 1];
+        var_dump($firstAfterUnvisitedVisitedSignIndex);
+        $sliceIndex = c ?: $signIndexes[count($signIndexes) - 1];
         $arr = array_merge(
             array_slice($arr, 0, $sliceIndex - 1),
             ['('],
