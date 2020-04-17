@@ -32,11 +32,11 @@ while ($key != count($arr)) {
             ['('],
             array_slice($arr, $openBrackets[$signIndex])
         );
-        var_dump($arr);
-        die('asd');
     }
     ++$key;
 }
+var_dump($arr);
+die('asd');
 //while ($key != count($arr)) {
 //    if ($arr[$key] == '+' || $arr[$key] == '*') {
 //        $signIndexes[] = $key;
