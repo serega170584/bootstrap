@@ -32,9 +32,9 @@ while ($key != count($arr)) {
             ['('],
             array_slice($arr, $openBrackets[$signIndex])
         );
-        var_dump($arr);
-        die('asd');
         ++$key;
+        var_dump($key);
+        die('asd');
     }
     ++$key;
 }
