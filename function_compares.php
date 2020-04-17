@@ -32,6 +32,7 @@ while ($key != count($arr)) {
             ['('],
             array_slice($arr, $openBrackets[$signIndex])
         );
+        ++$key;
     }
     ++$key;
 }
