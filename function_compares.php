@@ -25,13 +25,13 @@ while ($key <= count($arr)) {
     }
     if ($arr[$key] == ')') {
         $signIndex = array_pop($signIndexes);
-        $openBrackets[$key + 1] = $openBrackets[$signIndex];
         $arr = array_merge(
-            array_slice($arr, 0, $openBrackets[$key]),
+            array_slice($arr, 0, $openBrackets[$signIndex]),
             ['('],
-            array_slice($arr, $openBrackets[$key])
+            array_slice($arr, $openBrackets[$signIndex])
         );
         ++$key;
+        $openBrackets[$key] = $openBrackets[$signIndex];
     }
     ++$key;
     if ($key > 11) {
