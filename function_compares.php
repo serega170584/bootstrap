@@ -12,7 +12,6 @@ $arr = [
     ')'
 ];
 $key = 0;
-$isContinue = true;
 $visitedSignIndexes = [];
 $signIndexes = [];
 $openBrackets = [];
@@ -26,6 +25,7 @@ while ($key <= count($arr)) {
     }
     if ($arr[$key] == ')') {
         $signIndex = array_pop($signIndexes);
+        $openBrackets[$key + 1] = $openBrackets[$signIndex];
         $arr = array_merge(
             array_slice($arr, 0, $openBrackets[$key]),
             ['('],
@@ -34,6 +34,10 @@ while ($key <= count($arr)) {
         ++$key;
     }
     ++$key;
+    if ($key > 11) {
+        var_dump($arr);
+        die('asd');
+    }
 }
 var_dump($arr);
 die('asd');
