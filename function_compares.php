@@ -27,13 +27,13 @@ while ($key != count($arr)) {
     if ($arr[$key] == ')') {
         $signIndex = array_pop($signIndexes);
         $openBrackets[$key] = $openBrackets[$signIndex];
-        var_dump($openBrackets);
-        die('asd');
         $arr = array_merge(
             array_slice($arr, 0, $openBrackets[$signIndex]),
             ['('],
             array_slice($arr, $openBrackets[$signIndex])
         );
+        var_dump($arr);
+        die('asd');
         ++$key;
     }
     ++$key;
