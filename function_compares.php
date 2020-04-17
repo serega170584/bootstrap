@@ -32,14 +32,14 @@ while ($key <= count($arr)) {
             ['('],
             array_slice($arr, $openBrackets[$key])
         );
-        if (count($arr)>11){
-            var_dump($arr);
-            die('asd');
-        }
         ++$key;
     }
-    var_dump($arr);
     ++$key;
+    var_dump($key);
+    if (count($arr)>11){
+        var_dump($arr);
+        die('asd');
+    }
 }
 var_dump($arr);
 die('asd');
