@@ -28,10 +28,14 @@ while ($key <= count($arr)) {
         $signIndex = array_pop($signIndexes);
         $openBrackets[$key] = $openBrackets[$signIndex];
         $arr = array_merge(
-            array_slice($arr, 0, $openBrackets[$signIndex]),
+            array_slice($arr, 0, $openBrackets[$key]),
             ['('],
-            array_slice($arr, $openBrackets[$signIndex])
+            array_slice($arr, $openBrackets[$key])
         );
+        if (count($arr)>11){
+            var_dump($arr);
+            die('asd');
+        }
         ++$key;
     }
     var_dump($arr);
