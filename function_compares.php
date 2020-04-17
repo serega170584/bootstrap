@@ -16,7 +16,7 @@ $isContinue = true;
 $visitedSignIndexes = [];
 $signIndexes = [];
 $openBrackets = [];
-while ($key != count($arr)) {
+while ($key <= count($arr)) {
     if ($arr[$key] == '+' || $arr[$key] == '*') {
         $signIndexes[] = $key;
         $openBrackets[$key] = $key - 1;
@@ -33,8 +33,6 @@ while ($key != count($arr)) {
             array_slice($arr, $openBrackets[$signIndex])
         );
         ++$key;
-        var_dump($key);
-        die('asd');
     }
     ++$key;
 }
