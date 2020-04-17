@@ -36,7 +36,7 @@ while ($key <= count($arr)) {
     }
     ++$key;
     var_dump($key);
-    if (count($arr)>11){
+    if (count($arr)>12){
         var_dump($arr);
         die('asd');
     }
