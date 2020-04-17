@@ -34,6 +34,7 @@ while ($key <= count($arr)) {
         );
         ++$key;
     }
+    var_dump($arr);
     ++$key;
 }
 var_dump($arr);
