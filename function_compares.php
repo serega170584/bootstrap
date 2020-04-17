@@ -26,6 +26,8 @@ while ($key != count($arr)) {
     }
     if ($arr[$key] == ')') {
         $signIndex = array_pop($signIndexes);
+        var_dump($signIndexes);
+        die('asd');
         $openBrackets[$key] = $openBrackets[$signIndex];
         $arr = array_merge(
             array_slice($arr, 0, $openBrackets[$signIndex]),
