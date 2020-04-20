@@ -429,3 +429,8 @@ ul {
 .info-entity-page .card {
     border: none;
 }
+
+.info-entity-page .card h4.card-title {
+    border: none;
+    font-size: 1rem;
+}
