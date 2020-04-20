@@ -14,5 +14,11 @@ function init() {
         }, {
             preset: 'islands#dotIcon',
             iconColor: '#735184'
+        }))
+        .add(new ymaps.Placemark([55.766946, 37.595944], {
+            balloonContent: '<strong>Пресненский район 1</strong>'
+        }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#735184'
         }));
 }
