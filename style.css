@@ -425,3 +425,7 @@ ul {
     width: 600px;
     height: 500px;
 }
+
+.info-entity-page .card {
+    border: none;
+}
