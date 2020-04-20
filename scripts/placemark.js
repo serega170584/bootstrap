@@ -20,5 +20,23 @@ function init() {
         }, {
             preset: 'islands#dotIcon',
             iconColor: '#735184'
+        }))
+        .add(new ymaps.Placemark([55.750139, 37.675938], {
+            balloonContent: '<strong>Район Лефортово</strong>'
+        }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#735184'
+        }))
+        .add(new ymaps.Placemark([55.755549, 37.543759], {
+            balloonContent: '<strong>Пресненский район 2</strong>'
+        }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#735184'
+        }))
+        .add(new ymaps.Placemark([55.744149, 37.718853], {
+            balloonContent: '<strong>Район Лефортово 2</strong>'
+        }, {
+            preset: 'islands#dotIcon',
+            iconColor: '#735184'
         }));
 }
