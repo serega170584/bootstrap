@@ -10,6 +10,8 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="scripts/placemark.js"></script>
 </head>
 <body>
 <header>
@@ -223,21 +225,20 @@
                 <nav class="breadcrumb">
                     <a href="template.html" class="breadcrumb-item">Главная</a>
                     <a href="news-line.html" class="breadcrumb-item">О ВУЗе</a>
-                    <span class="breadcrumb-item active">Лицензии</span>
+                    <span class="breadcrumb-item active">Контакты</span>
                 </nav>
                 <div class="card mb-2">
                     <div class="card-body info-entity-page">
-                        <h1 class="card-title">Лицензии</h1>
-                        <ul>
-                            <li><a href="documents/license.pdf" target="_blank">Лицензия на осуществление
-                                образовательной деятельности</a></li>
-                        </ul>
-                        <a href="documents/license_1.jpg">
-                            <img src="documents/license_1.jpg" class="img-license">
-                        </a>
-                        <a href="documents/license_2.jpg">
-                            <img src="documents/license_2.jpg" class="img-license">
-                        </a>
+                        <h1 class="card-title">Контакты</h1>
+                        <h3>Приёмная комиссия </h3>
+                        <p>109544, Россия, г. Москва, бульвар Энтузиастов, дом 2</p>
+                        <p>+7 (495) 229-14-41</p>
+                        <p>
+                            E-mail: info@1c-bitrix.ru<br> Сайт: 1c-bitrix.ru<br></p>
+                        <p>
+                            <a name="" id="" class="btn btn-primary" href="offices.html" role="button">Филиалы</a>
+                        </p>
+                        <div id="map"></div>
                     </div>
                 </div>
             </div>
