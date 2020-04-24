@@ -10,6 +10,8 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="scripts/placemark.js"></script>
 </head>
 <body>
 <header>
@@ -102,7 +104,8 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="news-line.html" id="dropdownId" data-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="news-line.html" id="dropdownId"
+                               data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">О ВУЗе</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownId">
                                 <a class="dropdown-item" href="about.html">Сведения об образовательном учреждении</a>
@@ -183,49 +186,31 @@
                 <nav class="navbar navbar-light pb-0 mb-3 pt-0 bg-light">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Сведения об образовательном учреждении</a>
+                            <a class="nav-link" href="admissions_committees.html">Приемная комиссия</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="faculties.html">Факультеты</a>
+                            <a class="nav-link" href="prepare-courses.html">Подготовительные курсы</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="offices.html">Филиалы</a>
+                            <a class="nav-link" href="photo-gallery">Фото-экскурсия</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="academic-council.html">Ученый совет</a>
+                            <a class="nav-link" href="applicant-documents.html">Документы и справки</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="structure.html">Структура</a>
+                            <a class="nav-link" href="rules.html">Правила и условия приема</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="chiefs.html">Руководство</a>
+                            <a class="nav-link" href="professions.html">Специальности и направления</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="dorm.html">Общежитие</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="teachers.html">Преподаватели и сотрудники</a>
+                            <a class="nav-link" href="#">Стоимость</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="history.html">История</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="order.html">Устав</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="library.html">Библиотека</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="news-line.html">Новости</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="events-line.html">Объявления</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="licenses.html">Лицензии</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacts.html">Контакты</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="video-gallery.html">Видеогалерея</a>
+                            <a class="nav-link" href="#">Студенческая жизнь</a>
                         </li>
                     </ul>
                 </nav>
@@ -269,36 +254,63 @@
             </div>
             <div class="col-md-8">
                 <nav class="breadcrumb">
-                    <a class="breadcrumb-item" href="template.html">Главная</a>
-                    <a class="breadcrumb-item" href="news-line.html">О ВУЗе</a>
-                    <a class="breadcrumb-item" href="news-line.html">Новости</a>
+                    <a href="template.html" class="breadcrumb-item">Главная</a>
+                    <a href="admissions_committees.html" class="breadcrumb-item">Абитуриентам</a>
+                    <span class="breadcrumb-item active">Общежитие</span>
                 </nav>
                 <div class="card mb-2">
                     <div class="card-body info-entity-page">
-                        <h1 class="card-title">Завершен чемпионат по футболу среди иностранных студентов</h1>
-                        <div class="date pl-0 pb-1">9 Августа, 2018</div>
-                        <p class="card-text"><img src="images/basketball-team-4609620_1920.jpg" alt="" class="pr-3">29
-                            мая 2012 года на спортивной арене Пензенского государственного университета завершился
-                            Чемпионат мира по футболу среди иностранных студентов вузов Пензы.
-
-                            29 мая 2012 года на спортивной арене Пензенского государственного университета завершился
-                            Чемпионат мира по футболу среди иностранных студентов вузов Пензы.
-
-                            «Чемпионат мира по футболу проводится уже второй год. Эту идею предложили наши активисты,
-                            которые создали союз иностранных студентов», - рассказала директор института международного
-                            сотрудничества ПГУ Ольга Мещерякова.
-
-                            В 2011 году участниками футбольных баталий были восемь команд, титул чемпионов достался
-                            дружине из Туркменистана. На сей раз в связи с тем, что состав участников изменился и
-                            сборных стало уже 12, главный трофей соревнований пришлось отдать более сильным соперникам.
-                            Как считают лидеры прошлого года, чтобы стать первыми, им не хватило одного: «Нам
-                            недоставало реализации. Мы хорошо защищали свои ворота, но вот забить не смогли», - пояснил
-                            участник чемпионата Эзиз Язмурадов (Туркменистан).
-
-                            По итогам соревнований спортсмены из команды республики Мали стали чемпионами.
-
-                            Второе место у сборной России, а на третью ступень пьедестала почета встали студенты из
-                            Туркменистана. </p>
+                        <h1 class="card-title">Общежитие</h1>
+                        <div id="map"></div>
+                        <div class="card-columns">
+                            <div class="card">
+                                <div class="card-body pl-0">
+                                    <h4 class="card-title">Приёмная комиссия</h4>
+                                    <p class="card-text">
+                                        111111, Россия, г. Москва, Проспект Мира 101с1, +7(495)111-11-11,
+                                        info@1c-bitrix.ru, 1c-bitrix.ru
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body pl-0">
+                                    <h4 class="card-title">Филиал 1</h4>
+                                    <p class="card-text">
+                                        111111, Россия, г. Москва, Пресненский район 1, +7(495)111-11-11,
+                                        info@1c-bitrix.ru, 1c-bitrix.ru
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body pl-0">
+                                    <h4 class="card-title">Филиал 2</h4>
+                                    <p class="card-text">
+                                        111111, Россия, г. Москва, Район Лефортово, +7(495)111-11-11, info@1c-bitrix.ru,
+                                        1c-bitrix.ru
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body pl-0">
+                                    <h4 class="card-title">Филиал 3</h4>
+                                    <p class="card-text">
+                                        111111, Россия, г. Москва, Пресненский район 2, +7(495)111-11-11,
+                                        info@1c-bitrix.ru,
+                                        1c-bitrix.ru
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body pl-0">
+                                    <h4 class="card-title">Филиал 4</h4>
+                                    <p class="card-text">
+                                        111111, Россия, г. Москва, Район Лефортово 2, +7(495)111-11-11,
+                                        info@1c-bitrix.ru,
+                                        1c-bitrix.ru
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
