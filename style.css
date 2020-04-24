@@ -436,5 +436,6 @@ ul {
 }
 
 .info-entity-page .img-license {
-    width: 50%;
+    width: 45%;
+    margin-right: 5%;
 }
