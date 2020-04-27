@@ -183,7 +183,7 @@
             <div class="col-md-4">
                 <nav class="navbar navbar-light pb-0 mb-3 pt-0 bg-light">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="educational-materials.html">Учебные материалы</a>
                         </li>
                         <li class="nav-item">
@@ -203,10 +203,11 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="scientific-life.html" id="scientificLifeDropdownId"
+                            <a class="nav-link dropdown-toggle" href="scientific-life.html"
+                               id="scientificLifeDropdownId"
                                data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="true">Научная жизнь</a>
-                            <div class="dropdown-menu" aria-labelledby="scientificLifeDropdownId">
+                            <div class="dropdown-menu show" aria-labelledby="scientificLifeDropdownId">
                                 <a class="dropdown-item" href="conferences.html">Конференции</a>
                                 <a class="dropdown-item" href="tenders.html">Конкурсы и гранты</a>
                             </div>
@@ -214,12 +215,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="sporting-life.html">Спортивная жизнь</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="socialSphereDropdownId"
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="social-sphere.html" id="socialSphereDropdownId"
                                data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="true">Социальная сфера</a>
-                            <div class="dropdown-menu" aria-labelledby="socialSphereDropdownId">
-                                <a class="dropdown-item" href="sports-complex.html">Спортивный комплекс</a>
+                            <div class="dropdown-menu show" aria-labelledby="socialSphereDropdownId">
+                                <a class="dropdown-item active" href="sports-complex.html">Спортивный комплекс</a>
                                 <a class="dropdown-item" href="#">Студгородок</a>
                                 <a class="dropdown-item" href="#">Санаторий-профилакторий</a>
                             </div>
@@ -274,66 +275,47 @@
                 <nav class="breadcrumb">
                     <a href="template.html" class="breadcrumb-item">Главная</a>
                     <a href="educational-materials.html" class="breadcrumb-item">Студентам</a>
-                    <span class="breadcrumb-item active">Учебные материалы</span>
+                    <span class="breadcrumb-item active">Спортивный комплекс</span>
                 </nav>
                 <div class="card mb-2">
-                    <div class="card-body">
-                        <h1 class="card-title">Учебные материалы</h1>
-                        <div class="container pl-0 mb-3">
-                            <form>
-                                <div class="form-row">
-                                    <div class="form-group col-lg-3">
-                                        <label for="type">Тип</label>
-                                        <select class="form-control" name="type"
-                                                id="type">
-                                            <option>Все</option>
-                                            <option>Методичекая литература</option>
-                                            <option>Учебные материалы</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-lg-3">
-                                        <label for="faculty">Факультет</label>
-                                        <select class="form-control" name="faculty"
-                                                id="faculty">
-                                            <option>Все</option>
-                                            <option>Повышения квалификации и дополнительного образования(ФПКиДО)
-                                            </option>
-                                            <option>Факультет прикладной математики и телекоммуникаций(ФПМиТ)</option>
-                                            <option>Юридический факультет(ЮФ)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-primary">Подобрать</button>
-                            </form>
-                        </div>
-                        <div>
-                            <a href="documents/math.pdf" target="_blank">Методические
-                                указания. Математика. Часть 3. Комплексные числа, неопределенный и определенный
-                                интеграл, функции многих переменных и дифференциальные уравнения.</a>
-                        </div>
-                        <div>
-                            <a href="documents/math.pdf" target="_blank">
-                                Практикум. Математика. Часть 5. Теория вероятностей и математическая статистика с
-                                анализом
-                                типичных ошибок.</a>
-                        </div>
-                        <div>
-                            <a href="documents/math.pdf" target="_blank">Методические
-                                указания. Математика. Часть 5: Теория вероятностей, математическая статистика, случайные
-                                процессы</a>
-                        </div>
-                        <div>
-                            <a href="documents/math.pdf" target="_blank">Типовой
-                                расчёт. Математика. Часть 5. Теория вероятностей и математическая статистика.</a>
-                        </div>
-                        <div>
-                            <a href="documents/math.pdf" target="_blank">Образцы
-                                экзаменационных задач</a>
-                        </div>
-                        <div>
-                            <a href="documents/math.pdf" target="_blank">Краткий
-                                справочник и индивидуальные задания по элементарной математике</a>
-                        </div>
+                    <div class="card-body info-entity-page">
+                        <h1 class="card-title">Спортивный комплекс</h1>
+                        <p>В&nbsp;МИЭТе имеются отличные возможности для занятия спортом.</p>
+
+                        <p>Институт располагает хорошей <span style="word-spacing:nowrap;">учебно-спортивной</span>
+                            базой: большим спортивным комплексом, который включает в&nbsp;себя: 25-метровый плавательный
+                            бассейн на 6 дорожек, крытый игровой комплекс (баскетбол, волейбол, мини-футбол), зал для
+                            шейпинга, зал кардиотренажеров, стадион с&nbsp;футбольным полем и&nbsp;беговыми дорожками,
+                            площадками для тенниса и&nbsp;<span style="word-spacing:nowrap;">мини-футбола</span>, лыжную
+                            базу. </p>
+
+                        <p>Во&nbsp;время обучения в&nbsp;институте занятия по&nbsp;физической культуре являются
+                            обязательными.</p>
+
+                        <p>В&nbsp;начале учебного года первокурсники проходят медицинское обследование на&nbsp;базе
+                            здравпункта МИЭТа. Студенты, не&nbsp;прошедшие это обследование, к&nbsp;учебным занятиям не&nbsp;допускаются.</p>
+
+                        <p>Прошедшие обследование распределяются по&nbsp;учебным отделениям в&nbsp;зависимости от&nbsp;состояния
+                            здоровья: </p>
+
+                        <ol>
+                            <li>студенты основной и&nbsp;подготовительной медицинских групп;
+                                <br></li>
+
+                            <li>студенты, имеющие отклонения в&nbsp;состоянии здоровья;
+                                <br></li>
+
+                            <li>студенты, освобожденные по&nbsp;состоянию здоровья от&nbsp;занятий, зачисляются в&nbsp;специальное
+                                отделение для освоения доступных отделов учебной программы.
+                            </li>
+                        </ol>
+                        <p>Освобождение отдельных студентов от&nbsp;учебных занятий по&nbsp;физической культуре может
+                            быть временной мерой, вызванной, например, заболеванием или травмой. Это должна подтверждать
+                            справка, заверенная здравпунктом МИЭТа.</p>
+
+                        <p>Кроме основных занятий по&nbsp;физическому воспитанию студенты могут заниматься в&nbsp;одной
+                            из спортивных секций: плавание, футбол, баскетбол, волейбол, теннис, легкая атлетика,
+                            альпинизм, шейпинг, аэробика, карате.</p>
                     </div>
                 </div>
             </div>
