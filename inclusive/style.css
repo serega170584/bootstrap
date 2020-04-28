@@ -13,7 +13,7 @@ a {
 }
 
 .icon {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .globe-logo {
@@ -32,7 +32,7 @@ a {
 
 @media screen and (min-width: 0px) {
     .logo-text {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .globe-logo {
@@ -86,7 +86,7 @@ a {
 
 @media screen and (min-width: 576px) {
     .logo-text {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .globe-logo {
@@ -100,7 +100,7 @@ a {
 
 @media screen and (min-width: 768px) {
     .logo-text {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .globe-logo {
@@ -151,7 +151,7 @@ a {
     }
 
     .inner-card .card-body div a {
-        font-size: 1.3rem;
+        font-size: 2.3rem;
     }
 
     .inner-card .card-body {
@@ -215,7 +215,7 @@ a {
 }
 
 .header-link {
-    font-size: 0.85rem;
+    font-size: 1.85rem;
 }
 
 .telephone {
@@ -251,7 +251,7 @@ a {
 .navbar-toggler {
     padding: 0;
     border: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .top-header .navbar-collapse {
@@ -319,7 +319,7 @@ a {
 }
 
 .date {
-    font-size: 12px;
+    font-size: 24px;
 }
 
 .after-info-entity {
@@ -381,11 +381,11 @@ footer .show-item {
 }
 
 p {
-    font-size: 14px;
+    font-size: 24px;
 }
 
 .card-body div.link-title a {
-    font-size: 16px;
+    font-size: 24px;
 }
 
 .inner-card .card-body div.date {
@@ -394,15 +394,15 @@ p {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 2.3rem;
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 2.1rem;
 }
 
 ul {
@@ -411,7 +411,7 @@ ul {
 }
 
 .breadcrumb-item {
-    font-size: 0.72rem;
+    font-size: 1rem;
 }
 
 .person-title {
@@ -423,7 +423,7 @@ ul {
 }
 
 .info-entity-page label {
-    font-size: 0.86rem;
+    font-size: 1.86rem;
 }
 
 #map {
@@ -437,7 +437,7 @@ ul {
 
 .info-entity-page .card h4.card-title {
     border: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .info-entity-page .img-license {
