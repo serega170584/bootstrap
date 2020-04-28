@@ -447,3 +447,7 @@ ul {
 .font-modal {
     text-align: left;
 }
+
+.font-modal a {
+    text-decoration: underline;
+}
