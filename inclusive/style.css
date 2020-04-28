@@ -25,7 +25,7 @@ a {
 }
 
 .logo-text a {
-    color: #000;
+    color: #17a2b8;
     text-decoration: none;
 }
 
@@ -236,7 +236,7 @@ a {
 .top-header .nav-link {
     padding-top: 0;
     padding-bottom: 0;
-    color: #fff;
+    color: #17a2b8;
 }
 
 .top-header .navbar {
@@ -259,7 +259,7 @@ a {
     margin-top: 88px;
     padding-left: 15px;
     z-index: 1;
-    background-color: #fff;
+    background-color: #17a2b8;
     text-align: left;
     left: 0;
 }
@@ -356,15 +356,15 @@ a {
 
 footer {
     background-color: #000;
-    color: #fff;
+    color: #17a2b8;
 }
 
 footer .navbar-light .navbar-nav .nav-link {
-    color: #fff;
+    color: #17a2b8;
 }
 
 footer .navbar-light .navbar-nav .nav-link:hover {
-    color: #fff;
+    color: #17a2b8;
 }
 
 footer .time {
