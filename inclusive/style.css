@@ -456,3 +456,7 @@ ul {
 .navbar-light .navbar-nav .nav-link {
     color: #17a2b8;
 }
+
+.btn {
+    font-size: 1.5rem;
+}
